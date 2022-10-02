@@ -2,20 +2,17 @@ from django.shortcuts import render
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-
-from track_station.settings import WHERETHEISS_API, ISS_ID
+from helpers.communications import WhereTheISSAPI
 from track.serializers import TrackSerializer
-
-import requests
 
 # Create your views here.
 class TrackViewSet(viewsets.ViewSet):
     
-    @action(detail=False, methods=['POST'])
+    @action(detail=False, methods=['POST', 'GET'])
     def track(self, request):
-        endpoint = f"/satellites/{ISS_ID}"
-        response = requests.get(WHERETHEISS_API+endpoint)
-        serializer = TrackSerializer(data=response.json())
+        satellite_id = WhereTheISSAPI.get_satellite_id("/satellites", name="iss")
+        data = WhereTheISSAPI.get_iss_data_treated(f"/satellites/{satellite_id}")
+        serializer = TrackSerializer(data=data)
         try:
             serializer.is_valid()
             return Response(serializer.data, status=status.HTTP_200_OK)
