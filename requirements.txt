@@ -1,5 +1,6 @@
 alembic==1.8.1
 asgiref==3.3.4
+astropy==5.1
 certifi==2022.9.24
 charset-normalizer==2.0.12
 Deprecated==1.2.13
@@ -27,15 +28,18 @@ pandas==1.2.4
 pangres==2.3.1
 Pillow==8.2.0
 psycopg2-binary==2.8.6
+pyerfa==2.0.0.1
 Pygments==2.9.0
 PyJWT==2.1.0
 pyparsing==3.0.9
 python-dateutil==2.8.2
 python-magic==0.4.27
 pytz==2021.1
+PyYAML==6.0
 redis==4.1.1
 requests==2.26.0
 sentry-sdk==1.9.0
+sgp4==2.21
 six==1.16.0
 SQLAlchemy==1.4.25
 sqlparse==0.4.1

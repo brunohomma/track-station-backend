@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-aorwvqh8^+3_!19i2v32hp4ma)^)j)2zq4^=4b==j_wf^tp024
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '192.168.227.76', '10.0.0.106']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -129,3 +129,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 WHERETHEISS_API = env('WHERETHEISS_API', default='')
 TLE_API = env('TLE_API', default='')
+
+REDIS_HOST = '127.0.0.1'
+REDIS_PORT = 6379
