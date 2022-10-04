@@ -145,6 +145,13 @@ https://api.wheretheiss.at/v1
 ```
 **NOTE**: test the same for the variable `TLE_API`
 
+After that, you need to run:
+```
+python manage.py runserver
+```
+
+**NOTE**: Ignore all migrations warnings because we don't use database, so it's not need to run migrations
+
 ## License
 
 MIT License
