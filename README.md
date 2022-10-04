@@ -49,7 +49,7 @@ To run the application server follow the instructions below:
 
 First: You need to set Environment variables
 
-``` python
+``` sh
 local.env
 WHERETHEISS_API=https://api.wheretheiss.at/v1
 TLE_API=http://tle.ivanstanojevic.me
