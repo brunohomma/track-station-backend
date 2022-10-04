@@ -8,20 +8,34 @@
 
 This project defines the backend of our solution. With it we are able to perform communications with other API's like [Where the ISS API](https://wheretheiss.at/w/developer) and others (coming soon).
 
-**NOTE**: This Documentation is currently being updated
-
 ## Technologies
 
-[COMMING SOON]
+Dillinger uses a number of open source projects to work properly:
+
+- [AngularJS] - HTML enhanced for web apps!
+- [Ace Editor] - awesome web-based text editor
+- [markdown-it] - Markdown parser done right. Fast and easy to extend.
+- [Twitter Bootstrap] - great UI boilerplate for modern web apps
+- [node.js] - evented I/O for the backend
+- [Express] - fast node.js network app framework [@tjholowaychuk]
+- [Gulp] - the streaming build system
+- [Breakdance](https://breakdance.github.io/breakdance/) - HTML
+to Markdown converter
+- [jQuery] - duh
 
 ## Installation
 
-The API was developed using Django and Django REST framework. The project was developed using Python version 3.9.5, Django version 3.2.2 and DRF version 3.12.4.
+The API was developed using Django and Django REST framework. The project was developed using Python version 3.9.5, Django version 3.2.2 and DRF version 3.12.4. We use libraries such as Astropy and SGP4 to get the coordinates of the ISS. We use Redis to prevent the API from identifying the requests as mm denial of service attacks, so we store the relevant information in RAM and use it to get the ISS positions.
 
-For the Django installation:
+For the Django installation and dependencies:
 
 ```sh
 pip install Django==3.2.2
+pip install django-cors-headers==3.5.0
+pip install django-environ==0.4.5
+pip install django-filter==2.4.0
+pip install django-guardian==2.3.0
+pip install django-versatileimagefield==2.0
 ```
 **NOTE**: You must have the pip installer configured on your machine.
 
@@ -29,6 +43,29 @@ For the Django REST framework installation:
 ```sh
 pip install djangorestframework==3.12.4
 ```
+For important libraries used in the API:
+```sh
+pip install requests==2.26.0
+pip install astropy==5.1
+pip install sgp4==2.21
+```
+
+For the Redis library installation:
+```sh
+pip install redis==4.1.1
+```
+
+**NOTE**: You must have Redis installed!!!
+
+### How to install Redis on Windows
+
+Acess the link bellow to installation instructions in Windows:
+https://redis.io/docs/getting-started/installation/install-redis-on-windows/
+
+### How to install Redis on Linux
+
+Acess the link bellow to installation instructions in Linux:
+https://redis.io/docs/getting-started/installation/install-redis-on-linux/
 
 ## Features
 
@@ -107,3 +144,32 @@ And the result will be:
 https://api.wheretheiss.at/v1
 ```
 **NOTE**: test the same for the variable `TLE_API`
+
+## License
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+[dill]: <https://github.com/joemccann/dillinger>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [john gruber]: <http://daringfireball.net>
+   [df1]: <http://daringfireball.net/projects/markdown/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [node.js]: <http://nodejs.org>
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [jQuery]: <http://jquery.com>
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [express]: <http://expressjs.com>
+   [AngularJS]: <http://angularjs.org>
+   [Gulp]: <http://gulpjs.com>
+
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
+   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
