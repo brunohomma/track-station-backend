@@ -8,6 +8,8 @@
 
 This project defines the backend of our solution. With it we are able to perform communications with other API's like [Where the ISS API](https://wheretheiss.at/w/developer) and others (coming soon).
 
+**NOTE**: This Documentation is currently being updated
+
 ## Technologies
 
 [COMMING SOON]
