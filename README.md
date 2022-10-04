@@ -49,9 +49,61 @@ pip install djangorestframework==3.12.4
 
 To run the application server follow the instructions below:
 
-First: You need to set Environment variables
-(copy this content in local.env file)
+First: Set Environment variables
+
+In Windows:
+
+To set persistent environment variables at the command line, we will use `setx.exe`. It became part of Windows as of Vista/Windows Server 2008. Prior to that, it was part of the Windows Resource Kit. If you need the Windows Resource Kit, see Resources at the bottom of the page.  
+`setx.exe` does not set the environment variable in the current command prompt, but it will be available in subsequent command prompts.
+```
+setx WHERETHEISS_API "https://api.wheretheiss.at/v1"
+```
+```
+setx TLE_API "http://tle.ivanstanojevic.me"
+```
+To check if the variables have been set:
+
+In command prompt (cmd):
+```
+echo %WHERETHEISS_API%
+```
+In powershell:
+```
+echo $Env:WHERETHEISS_API
+```
+Output:
+```
+https://api.wheretheiss.at/v1
+```
+
+In Linux:
+
+We have two options for setting the environment variables:
+
+one a one:
+```
+export WHERETHEISS_API=https://api.wheretheiss.at/v1
+export TLE_API=http://tle.ivanstanojevic.me
+```
+single set:
+
+1. copy the content bellow in a local.env file in current directory;
 ``` 
 WHERETHEISS_API=https://api.wheretheiss.at/v1
 TLE_API=http://tle.ivanstanojevic.me
 ```
+2. In the current directory, run this command:
+```
+export $(cat local.env)
+```
+
+Output:
+Following either way, we will get the same output. Run this command bellow:
+```
+echo $WHERETHEISS_API
+```
+And the result will be:
+```
+https://api.wheretheiss.at/v1
+```
+**NOTE**: test the same for the variable `TLE_API`
