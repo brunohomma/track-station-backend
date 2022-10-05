@@ -1,12 +1,41 @@
-# DartSaurs API Backend
+<h1 align="center">
+  <br>
+  <a href="http://68.183.26.243/dartsaurs/"><img src="https://drive.google.com/uc?export=view&id=1u6rsZHnae_r0B6LIpGbJczVpDDM5kbOs" alt="Markdownify" width="200"></a>
+  <br>
+  DartSaurs API Backend
+  <br>
+</h1>
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
+<h4 align="center">A project of <a href="https://2022.spaceappschallenge.org/challenges/2022-challenges/track-the-iss/details" target="_blank">NASA International Space Apps Challenge 2022</a></h4>
 
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+<p align="center">
+  <a href="https://badge.fury.io/js/electron-markdownify">
+    <img src="https://badge.fury.io/js/electron-markdownify.svg"
+         alt="Gitter">
+  </a>
+  <a href="https://gitter.im/amitmerchant1990/electron-markdownify"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://saythanks.io/to/bullredeyes@gmail.com">
+      <img src="https://img.shields.io/badge/SayThanks.io-%E2%98%BC-1EAEDB.svg">
+  </a>
+  <a href="https://www.paypal.me/AmitMerchant">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&amp;style=flat">
+  </a>
+</p>
+
+<p align="center">
+  <a href="#team">Team</a> •
+  <a href="#technologies">Technologies</a> •
+  <a href="#installation">Installation</a> •
+  <a href="#">Credits</a> •
+  <a href="#run-application">Run Application</a> •
+  <a href="#license">License</a>
+</p>
 
 ## Introduction
 
-This project defines the backend of our solution. With it we are able to perform communications with other API's like [Where the ISS API](https://wheretheiss.at/w/developer) and others (coming soon).
+This project was created from one of the 23 challenges offered in the NASA International Space Apps Challenge 2022. Our challenge was to develop a responsive web platform for us to track the International Space Station (ISS) in a 3D modeling. Using some resources offered by NASA, our team elaborated this project with a lot of dedication and focus. I hope you enjoy it and see when the ISS will pass over your heads.
+
+by: DartSaurs Team
 
 ## Team
 
@@ -14,10 +43,9 @@ This project defines the backend of our solution. With it we are able to perform
 | ------ | ------ |
  <img src="https://drive.google.com/uc?export=view&id=17HGgIWZvfUmxcKWObBA0B3UK7S7ouW_u" width="100"> | **Bruno Mitsuo Homma** <br> Software Engeneer /  Backend Developer <br> social media: <a href="https://www.linkedin.com/in/bruno-mitsuo-homma-432100169/"><img src="https://raw.githubusercontent.com/yushi1007/yushi1007/1f3f3e189376e20a38857f06c588eaae182998ab/images/linkedin.svg" alt="icon" width="21px"/></a> <a href="https://www.instagram.com/bruno.homma/"><img src="https://raw.githubusercontent.com/yushi1007/yushi1007/1f3f3e189376e20a38857f06c588eaae182998ab/images/instagram.svg" alt="icon" width="21px"/></a> |
 | <img src="https://drive.google.com/uc?export=view&id=1Z243MrnAXiM4Subf5v1UcqjUQ2XI9cVD" width="100"> | **Cesar Augusto Nascimento** <br> Biologist <br> PhD in Genetics and Molecular Biology at Universidade Estadual de Campinas - Unicamp  |
-| <img src="https://drive.google.com/uc?export=view&id=1f-si8P7bMpeE8uT0N4SUxZ5Umw91MRlT" width="100"> | **Paulo Henrique da Costa** <br> Graduating in Mechanical Engineering from Faculdade de Engenharia de Piracicaba - EEP  <br> social media: <a href="https://www.linkedin.com/in/paulo-h-c/"><img src="https://raw.githubusercontent.com/yushi1007/yushi1007/1f3f3e189376e20a38857f06c588eaae182998ab/images/linkedin.svg" alt="icon" width="21px"/></a> |
+| <img src="https://drive.google.com/uc?export=view&id=1yUM5Ff6OuxkiA20o8d2Moriu-U1a5MdD" width="100"> | **Everton da Silva** <br> Measurement and Technology Analyst Senior <br> Study and application of algorithms for automatic recomposition of electricity distribution networks  <br> social media: <a href="https://www.linkedin.com/in/everton-silva-tom-62a9b429"><img src="https://raw.githubusercontent.com/yushi1007/yushi1007/1f3f3e189376e20a38857f06c588eaae182998ab/images/linkedin.svg" alt="icon" width="21px"/></a> |
 | <img src="https://drive.google.com/uc?export=view&id=1TDOGSiy5rEoWvty3Np4axIy3w-OLMaS1" width="100"> | **Lucas Nascimento** <br> Agronomist Engineer <br> Master's student in Genetics and Molecular Biology at Universidade Estadual de Campinas - Unicamp  |
-
-[COMMING SOON]
+| <img src="https://drive.google.com/uc?export=view&id=1f-si8P7bMpeE8uT0N4SUxZ5Umw91MRlT" width="100"> | **Paulo Henrique da Costa** <br> Graduating in Mechanical Engineering from Faculdade de Engenharia de Piracicaba - EEP  <br> social media: <a href="https://www.linkedin.com/in/paulo-h-c/"><img src="https://raw.githubusercontent.com/yushi1007/yushi1007/1f3f3e189376e20a38857f06c588eaae182998ab/images/linkedin.svg" alt="icon" width="21px"/></a> |
 
 ## Technologies
 
@@ -56,6 +84,41 @@ pip install redis==4.1.1
 ```
 
 **NOTE**: You must have Redis installed!!!
+
+#### or
+
+### Direct Requirements Installation
+
+You can make the installation requirements from a .txt file. First you need to create a file called `requirements.txt`, and copy the content bellow into this file:
+```sh
+# Django
+Django==3.2.2
+django-cors-headers==3.5.0
+django-environ==0.4.5
+django-filter==2.4.0
+django-guardian==2.3.0
+django-versatileimagefield==2.0
+
+# Django REST Framework (DRF)
+djangorestframework==3.12.4
+
+# Redis
+redis==4.1.1
+
+# Request lib for API communications
+requests==2.26.0
+
+# For Coordenates Satellite Calculations
+astropy==5.1
+sgp4==2.21
+```
+
+After that, in the same directory as the requirements.txt file, run the command bellow:
+```sh
+pip install -r requirements.txt
+```
+
+Then you will install all the necessary requirements at once.
 
 ### How to install Redis on Windows
 
