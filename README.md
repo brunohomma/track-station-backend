@@ -26,7 +26,8 @@
   <a href="#team">Team</a> •
   <a href="#technologies">Technologies</a> •
   <a href="#installation">Installation</a> •
-  <a href="#">Credits</a> •
+  <a href="#features">Features</a> •
+  <a href="#endpoints">Endpoints</a> •
   <a href="#run-application">Run Application</a> •
   <a href="#license">License</a>
 </p>
